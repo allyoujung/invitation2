@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+
+/*FONTS:STRAT*/
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@500;600&display=swap');
+/*FONTS:END*/
+
+/* 공통속성 */
+body{box-sizing: border-box; font-family: 'Encode Sans SC', sans-serif; color:#fff; }
+.container{margin:0 auto; position: relative; box-sizing: border-box;}
+img{width:100%;display: block;}
+#main{background: #fff}
