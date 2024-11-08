@@ -1,167 +1,52 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>animation</title>
-    <meta name='title' content='animation'>
-    <meta name='subject' content='animation'>
-    <link rel="stylesheet" href="css/reset.css">      
-    <link rel="stylesheet" href="css/style.css"> 
+    <title>jung_portfolio</title>
+    <meta name='title' content='jung_portfolio'>
+    <meta name='subject' content='jung_portfolio'>
+    <meta name='publisher' content='jung'>
+    <meta name='location' content='Seoul Korea'>
+    <meta name='author' content='jung_portfolio'>
+    <meta name='author-   Date' content='2021-06-07'>
+    <meta name='copyright' content='jung_portfolio'>
+    <meta name='keywords' content='jung_portfolio,포트폴리오,퍼플리셔 포트폴리오'>
+    <meta name='classification' content='jung_portfolio'>
+    <meta name='robots' content='index'>
 
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <style>      
+    <title>moblie Portfolio</title>
 
-        .cont{position: relative;}
-        .tooltip_circle{display: flex;position: absolute;top: 5px;right: 88%;text-align: center;background-color: #005a8a;border-radius: 50%;width: 40px;height: 40px;font-size: 14px;line-height: 26px;cursor: default;z-index: 2;}
-        .tooltip_circle:hover{background-color: rgb(241, 166, 66); }
-        .tooltip_circle1_11{margin: auto; width:20px;height:20px;text-align: center;background-color: #fff;border-radius: 50%;font-size: 14px;line-height: 26px;cursor: default;}
-        .tooltip_circle1_1{display: flex;position: absolute;top: 5px;right: 88%;background-color: #005a8a;border-radius: 50%;width: 40px;height: 40px;opacity: 1; animation: spinner4 800ms linear infinite;z-index: 1;}
-        .tooltip_circle:hover p{display:block;transform-origin: 100% 0%;-webkit-animation: fadeIn 0.3s ease-in-out;animation: fadeIn 0.3s ease-in-out;}
-        .tooltip_circle p{display: none;text-align: left;background-color: #1E2021;padding: 20px;width: 190px;position: absolute;border-radius: 3px;box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);    top: 125%;right: -72px;color: #FFF;font-size: 13px;line-height: 1.4;}
-        .tooltip_circle p:before{position: absolute;content: '';width:0;height: 0;border:6px solid transparent;border-bottom-color:#1E2021;right:87px;top:-12px;}
-        .tooltip_circle p:after{width:100%;height:40px;content:'';position: absolute;top:-40px;left:0;}
-
-        .cont2{position: relative;}
-        .tooltip_circle2{display: flex;position: absolute;top: 129px;right: 89%;text-align: center;background-color: #005a8a;border-radius: 50%;width: 40px;height: 40px;font-size: 14px;line-height: 26px;cursor: default;z-index: 9;}
-        .tooltip_circle2:hover{background-color: rgb(241, 166, 66); }
-        .tooltip_circle2_22{margin: auto; width:20px;height:20px;text-align: center;background-color: #fff;border-radius: 50%;font-size: 14px;line-height: 26px;cursor: default;}
-        .tooltip_circle2_2{display: flex;position: absolute;top: 129px;right: 89%;background-color: #005a8a;border-radius: 50%;width: 40px;height: 40px;opacity: 1; animation: spinner4 800ms linear infinite;z-index: 8;}
-        .tooltip_circle2:hover p{display:block;transform-origin: 100% 0%;-webkit-animation: fadeIn 0.3s ease-in-out;animation: fadeIn 0.3s ease-in-out;}
-        .tooltip_circle2 p{display: none;text-align: left;background-color: #1E2021;padding: 20px;width: 190px;position: absolute;border-radius: 3px;box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);    top: 125%;right: -72px;color: #FFF;font-size: 13px;line-height: 1.4;z-index: 1;}
-        .tooltip_circle2 p:before{position: absolute;content: '';width:0;height: 0;border:6px solid transparent;border-bottom-color:#1E2021;right:87px;top:-12px;}
-        .tooltip_circle2 p:after{width:100%;height:40px;content:'';position: absolute;top:-40px;left:0;}
-
-        .cont3{position: relative;}
-        .tooltip_circle3{display: flex;position: absolute;top: 139px;left: 18%;text-align: center;background-color: #005a8a;border-radius: 50%;width: 40px;height: 40px;font-size: 14px;line-height: 26px;cursor: default;z-index: 7;}
-        .tooltip_circle3:hover{background-color: rgb(241, 166, 66); }
-        .tooltip_circle3_33{margin: auto; width:20px;height:20px;text-align: center;background-color: #fff;border-radius: 50%;font-size: 14px;line-height: 26px;cursor: default;}
-        .tooltip_circle3_3{display: flex;position: absolute;top: 139px;left: 18%;background-color: #005a8a;border-radius: 50%;width: 40px;height: 40px;opacity: 1; animation: spinner4 800ms linear infinite;z-index: 6;}
-        .tooltip_circle3:hover p{display:block;transform-origin: 100% 0%;-webkit-animation: fadeIn 0.3s ease-in-out;animation: fadeIn 0.3s ease-in-out;}
-        .tooltip_circle3 p{display: none;text-align: left;background-color: #1E2021;padding: 20px;width: 190px;position: absolute;border-radius: 3px;box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);    top: 125%;right: -72px;color: #FFF;font-size: 13px;line-height: 1.4;z-index: 1;}
-        .tooltip_circle3 p:before{position: absolute;content: '';width:0;height: 0;border:6px solid transparent;border-bottom-color:#1E2021;right:87px;top:-12px;}
-        .tooltip_circle3 p:after{width:100%;height:40px;content:'';position: absolute;top:-40px;left:0;}
-
-        .cont4{position: relative;}
-        .tooltip_circle4{display: flex;position: absolute;top: 290px;left: 19%;text-align: center;background-color: #005a8a;border-radius: 50%;width: 40px;height: 40px;font-size: 14px;line-height: 26px;cursor: default;z-index: 3;}
-        .tooltip_circle4:hover{background-color: rgb(241, 166, 66); }
-        .tooltip_circle4_44{margin: auto; width:20px;height:20px;text-align: center;background-color: #fff;border-radius: 50%;font-size: 14px;line-height: 26px;cursor: default;}
-        .tooltip_circle4_4{display: flex;position: absolute;top: 290px;left: 19%;background-color: #005a8a;border-radius: 50%;width: 40px;height: 40px;opacity: 1; animation: spinner4 800ms linear infinite;z-index: 2;}
-        .tooltip_circle4:hover p{display:block;transform-origin: 100% 0%;-webkit-animation: fadeIn 0.3s ease-in-out;animation: fadeIn 0.3s ease-in-out;}
-        .tooltip_circle4 p{display: none;text-align: left;background-color: #1E2021;padding: 20px;width: 190px;position: absolute;border-radius: 3px;box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);    top: 125%;right: -72px;color: #FFF;font-size: 13px;line-height: 1.4;z-index: 1;}
-        .tooltip_circle4 p:before{position: absolute;content: '';width:0;height: 0;border:6px solid transparent;border-bottom-color:#1E2021;right:87px;top:-12px;}
-        .tooltip_circle4 p:after{width:100%;height:40px;content:'';position: absolute;top:-40px;left:0;}
-
-        .cont5{position: relative;}
-        .tooltip_circle5{display: flex;position: absolute;top: 415px;left: 18%;text-align: center;background-color: #005a8a;border-radius: 50%;width: 40px;height: 40px;font-size: 14px;line-height: 26px;cursor: default;z-index: 2;}
-        .tooltip_circle5:hover{background-color: rgb(241, 166, 66); }
-        .tooltip_circle5_55{margin: auto; width:20px;height:20px;text-align: center;background-color: #fff;border-radius: 50%;font-size: 14px;line-height: 26px;cursor: default;}
-        .tooltip_circle5_5{display: flex;position: absolute;top: 415px;left: 18%;background-color: #005a8a;border-radius: 50%;width: 40px;height: 40px;opacity: 1; animation: spinner4 800ms linear infinite;z-index: 1;}
-        .tooltip_circle5:hover p{display:block;transform-origin: 100% 0%;-webkit-animation: fadeIn 0.3s ease-in-out;animation: fadeIn 0.3s ease-in-out;}
-        .tooltip_circle5 p{display: none;text-align: left;background-color: #1E2021;padding: 20px;width: 190px;position: absolute;border-radius: 3px;box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);    top: 125%;right: -72px;color: #FFF;font-size: 13px;line-height: 1.4;}
-        .tooltip_circle5 p:before{position: absolute;content: '';width:0;height: 0;border:6px solid transparent;border-bottom-color:#1E2021;right:87px;top:-12px;}
-        .tooltip_circle5 p:after{width:100%;height:40px;content:'';position: absolute;top:-40px;left:0;}
-
-        .cont6{position: relative;}
-        .tooltip_circle6{display: flex;position: absolute;top: 452px;right: 87%;text-align: center;background-color: #005a8a;border-radius: 50%;width: 40px;height: 40px;font-size: 14px;line-height: 26px;cursor: default;z-index: 2;}
-        .tooltip_circle6:hover{background-color: rgb(241, 166, 66); }
-        .tooltip_circle6_66{margin: auto; width:20px;height:20px;text-align: center;background-color: #fff;border-radius: 50%;font-size: 14px;line-height: 26px;cursor: default;}
-        .tooltip_circle6_6{display: flex;position: absolute;top: 452px;right: 87%;background-color: #005a8a;border-radius: 50%;width: 40px;height: 40px;opacity: 1; animation: spinner4 800ms linear infinite;z-index: 1;}
-        .tooltip_circle6:hover p{display:block;transform-origin: 100% 0%;-webkit-animation: fadeIn 0.3s ease-in-out;animation: fadeIn 0.3s ease-in-out;}
-        .tooltip_circle6 p{display: none;text-align: left;background-color: #1E2021;padding: 20px;width: 190px;position: absolute;border-radius: 3px;box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);    top: 125%;right: -72px;color: #FFF;font-size: 13px;line-height: 1.4;}
-        .tooltip_circle6 p:before{position: absolute;content: '';width:0;height: 0;border:6px solid transparent;border-bottom-color:#1E2021;right:87px;top:-12px;}
-        .tooltip_circle6 p:after{width:100%;height:40px;content:'';position: absolute;top:-40px;left:0;}
-        
-        
-@-webkit-keyframes fadeIn {
-0% { 
- opacity:0; 
-    transform: scale(0.6);
-}
-100% {
-    opacity:100%;
-    transform: scale(1);
-}
-}
-
-@keyframes fadeIn {
-0% { opacity:0; }
-100% { opacity:100%; }
-}
-
-@keyframes spinner4 {
-to {
-transform: scale(1.5);
-opacity: 0;
-}
-}
-
-@keyframes box-ani {
-	from {
-		transform: translate(0, 0);
-	}
-	to {
-		transform: translate(0, 15px);
-	}
-}
-        
-
- </style>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
 
     
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/24ba2cef07.js" crossorigin="anonymous"></script>
+    <script src="js/typed.js"></script>
+    <script src="js/script.js" defer></script>
+    <!--[if (lte IE 12)]>
+		<script src='js/script1.js'></script>
+	<![endif]-->
 </head>
 <body>
-
-<div class="sub-contents">
-    <div class="s_title">
-		<h1>애니메이션 툴팁 적용</h1>
-	</div>
-    <div class="image">
-        <div class="cont">
-            <div class="tooltip_circle">
-                <div class="tooltip_circle1_11"></div>
-                <p>INTEGRATED GENERATOR<br>2.5kW, 40-100kV generator with ergonomic controls on both front and back.</p>
-            </div>
-            <div class="tooltip_circle1_1"></div>
-        </div>
-        <div class="cont2">
-            <div class="tooltip_circle2">
-                <div class="tooltip_circle2_22"></div>
-                <p>INTEGRATED SOFTWARE<br>Rapid image acquisition and review.</p>
-            </div>
-            <div class="tooltip_circle2_2"></div>
-        </div>
-        <div class="cont3">
-            <div class="tooltip_circle3">
-                <div class="tooltip_circle3_33"></div>
-                <p>EZ-RAISE STRUT<br>Easily deploy or stow the X-ray tube.</p>
-            </div>
-            <div class="tooltip_circle3_3"></div>
-        </div>
-        <div class="cont4">
-            <div class="tooltip_circle4">
-                <div class="tooltip_circle4_44"></div>
-                <p>DR PANEL STORAGE<br>Securely store DR panels during transport.</p>
-            </div>
-            <div class="tooltip_circle4_4"></div>
-        </div>
-        <div class="cont5">
-            <div class="tooltip_circle5">
-                <div class="tooltip_circle5_55"></div>
-                <p>LARGE RUBBER WHEELS<br>Non-marking wheels for easy maneuverability.</p>
-            </div>
-            <div class="tooltip_circle5_5"></div>
-        </div>
-        <div class="cont6">
-            <div class="tooltip_circle6">
-                <div class="tooltip_circle6_66"></div>
-                <p>EZ-GLIDE LEG<br>Foot activated extension leg for stable positioning.</p>
-            </div>
-            <div class="tooltip_circle6_6"></div>
-        </div>
-        <img src="img/image.png" alt="이미지" class="">
+    <div class="wrap">
+        <main id="main">
+            <section id="works_title" class="title">
+                <div class="title_inner">
+                    <div class="container">
+                        <div class="tit_wrap">
+                            <img src="./img/01.png" alt="">
+                            <img src="./img/02.png" alt="">
+                            <img src="./img/03.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
-</div>
 </body>
 </html>
