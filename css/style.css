@@ -9,7 +9,7 @@
 body{box-sizing: border-box; font-family: 'Encode Sans SC', sans-serif; color:#fff; }
 .container{margin:0 auto; position: relative; box-sizing: border-box;}
 img{width:100%;display: block;}
-#main{background: linear-gradient( to bottom, #e6c1d6, #9e6ed4,#e6c1d6,#9e6ed4 );}
+#main{background: #fff}
 #footer{background: #9e6ed4;}
 /* HEADER */
 header{position: fixed; top: 0; left: 0; width: 100%; z-index: 1002;}
